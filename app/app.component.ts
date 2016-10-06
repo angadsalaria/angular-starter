@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
+import { ChildComponent } from './app.child-component';
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+  selector: 'parent-selector',
+  template: `
+                <div>  
+                  <h1>I'm a container component. {{message}}</h1>
+                  <child-selector (notify)='onNotify($event)'></child-selector>
+                </div>  
+            `
 })
-export class AppComponent {
+export class ParentComponent {
 
+  message = "Hello!";
 
+  onNotify(message:string):void {
+    alert(message);
+  }
 }
