@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
-import { ChildComponent } from './app.child-component';
 
 @Component({
   selector: 'parent-selector',
-  template: `
-                <div>  
-                  <h1>I'm a container component. {{message}}</h1>
-                  <child-selector (notify)='onNotify($event)'></child-selector>
-                </div>  
-            `
+  templateUrl: 'app/templates/parent-selector.html'
 })
 export class ParentComponent {
 
   message = "Hello!";
+
+  gridData = [
+    {id:1, fname: 'Angad', lname: 'Salaria'},
+    {id:2, fname: 'John', lname: 'Doe'},
+    {id:3, fname: 'Sam', lname: 'Adams'},
+    {id:4, fname: 'John', lname: 'Adams'},
+    {id:5, fname: 'Edward', lname: 'Miller'},
+    {id:6, fname: 'Lawrence', lname: 'Krauss'}
+  ];
 
   onNotify(message:string):void {
     alert(message);
