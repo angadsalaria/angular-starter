@@ -2,10 +2,13 @@
  * Created by asalaria on 10/9/2016.
  */
 
-import { Directive, ElementRef, Input, Renderer, Inject, forwardRef } from '@angular/core';
+import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@angular/core';
 import { AutoGrid } from './app.auto-grid';
 
-@Directive({ selector: '[autoGridEnable]' })
+@Component({
+  selector: '[autoGridEnable]',
+  template: '<ng-content></ng-content>'
+})
 
 export class AutoGridEnable {
 
