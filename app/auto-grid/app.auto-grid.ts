@@ -1,12 +1,16 @@
 /**
  * Created by asalaria on 10/5/2016.
  */
-import { Component, Input } from '@angular/core';
+import { Component, Input, Injectable } from '@angular/core';
+import { AutoGridEnable } from './app.auto-grid-enable';
 
 @Component({
   selector: 'auto-grid',
-  templateUrl: 'app/auto-grid/auto-grid.html'
+  templateUrl: 'app/auto-grid/auto-grid.html',
+  providers: []
 })
+
+@Injectable()
 export class AutoGrid {
 
   @Input() data: Array<Object>;
@@ -16,6 +20,6 @@ export class AutoGrid {
   };
 
   ngOnInit() {
-    console.log(this.data);
+    console.log('from auto-grid: ' + this.data);
   }
 }
