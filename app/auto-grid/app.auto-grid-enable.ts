@@ -19,11 +19,22 @@ import { AutoGrid } from './app.auto-grid';
 
 export class AutoGridEnable {
 
-  constructor(el: ElementRef, renderer: Renderer, @Inject(forwardRef(() => AutoGrid)) parent: AutoGrid) {
+  parent: AutoGrid;
+
+  constructor(el: ElementRef, renderer: Renderer, parent: AutoGrid) {
 
     renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
 
-    console.log('here1: ' + parent.data);
+    console.log('in child constructor: ' + parent.message);
+
+    this.parent = parent;
+
+  }
+
+  ngOnInit(){
+
+    console.log('from child ngOnInit: ' + this.parent.message);
+
   }
 
 }

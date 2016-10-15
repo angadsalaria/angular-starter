@@ -15,6 +15,8 @@ export class AutoGrid {
 
   @Input() data: Array<Object>;
 
+  message = 'static data';
+
   clickFn = function(){
     console.log('here');
   };

@@ -3,9 +3,6 @@
   <child-selector (notify)='onNotify($event)'></child-selector>
 
   <auto-grid [data]="gridData">
-    <div >
-      <span auto-grid-enable></span>
-    </div>
     <table class="table">
       <thead>
       <tr>
@@ -16,7 +13,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let data of gridData">
-        <td>{{data.id}}</td>
+        <td auto-grid-enable>{{data.id}}</td>
         <td>{{data.fname}}</td>
         <td>{{data.lname}}</td>
       </tr>
