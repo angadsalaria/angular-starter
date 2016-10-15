@@ -21,6 +21,18 @@ export class AutoGridEnable {
 
   parent: AutoGrid;
 
+  @Input('auto-grid-enable')
+  column: string;
+
+  @Input()
+  attr1: string;
+
+  @Input('attr-2')
+  attr2: string;
+
+
+
+
   constructor(el: ElementRef, renderer: Renderer, parent: AutoGrid) {
 
     renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
@@ -33,7 +45,7 @@ export class AutoGridEnable {
 
   ngOnInit(){
 
-    console.log('from child ngOnInit: ' + this.parent.message);
+    console.log('from child ngOnInit: ' + this.column);
 
   }
 
