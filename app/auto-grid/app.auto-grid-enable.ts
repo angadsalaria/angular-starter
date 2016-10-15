@@ -12,7 +12,7 @@ import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@ang
 import { AutoGrid } from './app.auto-grid';
 
 @Component({
-  selector: '[auto-grid-enable]',
+  selector: 'th[auto-grid-enable]',
   template: '<ng-content></ng-content>',
   providers: [AutoGrid]
 })
