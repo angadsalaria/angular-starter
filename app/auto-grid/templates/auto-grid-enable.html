@@ -1,0 +1,16 @@
+<!-- Transcluded parent content -->
+<ng-content></ng-content>
+
+<!-- Sort Control -->
+<div *ngIf = " isSortActive() " class="glyphicon glyphicon-menu-down"></div>
+
+<!-- Filter Control -->
+<div *ngIf = " isFilterActive() ">
+
+  <select>
+
+    <option></option>
+    <option *ngFor=" let item of getFilterItems() ">{{item}}</option>
+
+  </select>
+</div>

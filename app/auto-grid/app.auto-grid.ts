@@ -5,9 +5,9 @@ import { Component, Input, Injectable } from '@angular/core';
 import { AutoGridEnable } from './app.auto-grid-enable';
 
 @Component({
-  selector: 'auto-grid',
-  templateUrl: 'app/auto-grid/auto-grid.html',
-  providers: []
+  selector    : 'auto-grid',
+  templateUrl : 'app/auto-grid/templates/auto-grid.html',
+  providers   : []
 })
 
 @Injectable()

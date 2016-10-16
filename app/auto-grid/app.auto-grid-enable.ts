@@ -12,9 +12,9 @@ import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@ang
 import { AutoGrid } from './app.auto-grid';
 
 @Component({
-  selector: 'th[auto-grid-enable]',
-  template: '<ng-content></ng-content>',
-  providers: [AutoGrid]
+  selector    : 'th[auto-grid-enable]',
+  templateUrl : 'app/auto-grid/templates/auto-grid-enable.html',
+  providers   : [AutoGrid]
 })
 
 export class AutoGridEnable {
@@ -24,11 +24,11 @@ export class AutoGridEnable {
   @Input('auto-grid-enable')
   column: string;
 
-  @Input()
-  attr1: string;
+  @Input('enable-sort')
+  enableSort: any;
 
-  @Input('attr-2')
-  attr2: string;
+  @Input('enable-filter')
+  enableFilter: any;
 
 
 
@@ -37,7 +37,7 @@ export class AutoGridEnable {
 
     renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
 
-    console.log('in child constructor: ' + parent.message);
+    //console.log('in child constructor: ' + parent.message);
 
     this.parent = parent;
 
@@ -45,8 +45,20 @@ export class AutoGridEnable {
 
   ngOnInit(){
 
-    console.log('from child ngOnInit: ' + this.column);
+    console.log('from child ngOnInit: ' + this.enableSort);
 
+  }
+
+  isSortActive = function(){
+    return this.enableSort != undefined;
+  }
+
+  isFilterActive = function(){
+    return this.enableFilter != undefined;
+  }
+
+  getFilterItems = function(){
+    return [1,2,3,4,5,6];
   }
 
 }
