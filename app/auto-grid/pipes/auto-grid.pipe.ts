@@ -10,6 +10,9 @@ export class GridPipe implements PipeTransform {
 
   transform(allValues: any[]) {
 
+
+    console.log(allValues);
+
     return allValues.filter(value => value == 1);
 
   }
