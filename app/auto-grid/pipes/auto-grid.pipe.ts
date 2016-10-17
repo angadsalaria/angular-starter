@@ -13,7 +13,7 @@ export class GridPipe implements PipeTransform {
 
     console.log(allValues);
 
-    return allValues.filter(value => value == 1);
+    return allValues;
 
   }
 }
