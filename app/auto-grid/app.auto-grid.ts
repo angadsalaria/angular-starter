@@ -26,4 +26,5 @@ export class AutoGrid {
   ngOnInit() {
     console.log('from auto-grid: ' + this.data);
   }
+
 }

@@ -6,11 +6,13 @@
 
 <!-- Filter Control -->
 <div *ngIf = " isFilterActive() ">
+{{someval}}
+  <select [ngModel]="someval" (ngModelChange)="onChangeObj($event)">
 
-  <select>
 
-    <option></option>
-    <option *ngFor=" let item of getFilterItems() ">{{item}}</option>
+    <option *ngFor=" let item of getFilterItems() " [value]="item">
+      {{item}}
+    </option>
 
   </select>
 </div>

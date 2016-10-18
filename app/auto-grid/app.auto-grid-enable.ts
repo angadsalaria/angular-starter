@@ -61,4 +61,9 @@ export class AutoGridEnable {
     return [1,2,3,4,5,6];
   }
 
+
+  onChangeObj = function(newVal: any){
+    console.log(newVal);
+  }
+
 }
