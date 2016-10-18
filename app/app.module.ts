@@ -8,8 +8,9 @@ import { AutoGrid }  from './auto-grid/app.auto-grid';
 import { GridPipe }  from './auto-grid/pipes/auto-grid.pipe';
 
 @NgModule({
-  imports: [ BrowserModule ],
+  imports: [ BrowserModule],
   declarations: [ ParentComponent, ChildComponent, AutoGridEnable, AutoGrid, GridPipe ],
-  bootstrap: [ ParentComponent ]
+  bootstrap: [ ParentComponent ],
+  providers: [AutoGrid]
 })
 export class AppModule { }

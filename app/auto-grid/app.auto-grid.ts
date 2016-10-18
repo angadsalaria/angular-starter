@@ -3,11 +3,13 @@
  */
 import { Component, Input, Injectable } from '@angular/core';
 import { AutoGridEnable } from './app.auto-grid-enable';
+import { GridPipe } from './pipes/auto-grid.pipe'
 
 @Component({
   selector    : 'auto-grid',
   templateUrl : 'app/auto-grid/templates/auto-grid.html',
-  providers   : []
+  providers   : [],
+
 })
 
 @Injectable()
