@@ -6,8 +6,8 @@
 
 <!-- Filter Control -->
 <div *ngIf = " isFilterActive() ">
-{{someval}}
-  <select [ngModel]="someval" (ngModelChange)="onChangeObj($event)">
+
+  <select [ngModel]="filterSelection" (ngModelChange)="onFilterChange($event)">
 
 
     <option *ngFor=" let item of getFilterItems() " [value]="item">

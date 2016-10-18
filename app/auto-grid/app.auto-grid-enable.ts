@@ -62,8 +62,8 @@ export class AutoGridEnable {
   }
 
 
-  onChangeObj = function(newVal: any){
-    console.log(newVal);
+  onFilterChange = function(filterSelection: any){
+    console.log(filterSelection);
   }
 
 }
