@@ -7,9 +7,10 @@
  */
 
 
-
+import * as _ from 'lodash';
 import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@angular/core';
 import { AutoGrid } from './app.auto-grid';
+
 
 @Component({
   selector    : 'th[auto-grid-enable]',
@@ -58,7 +59,10 @@ export class AutoGridEnable {
   }
 
   getFilterItems = function(){
-    return [1,2,3,4,5,6];
+
+
+
+    return _.values([1,2,3,4,5,6]);
   }
 
 

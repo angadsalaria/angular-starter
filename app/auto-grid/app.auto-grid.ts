@@ -19,7 +19,7 @@ export class AutoGrid {
 
   message = 'static message';
 
-  clickFn = function(){
+  getFilterOptions = function(path :string){
     console.log('here');
   };
 
