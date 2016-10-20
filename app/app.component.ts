@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { AutoGrid } from './auto-grid/app.auto-grid';
+
 
 @Component({
   selector: 'parent-selector',
-  templateUrl: 'app/templates/parent-selector.html'
+  templateUrl: 'app/templates/parent-selector.html',
+  providers: [AutoGrid]
 })
 export class ParentComponent {
 

@@ -3,23 +3,25 @@
  */
 
 import { Pipe, PipeTransform} from '@angular/core';
-import { AutoGrid } from '../app.auto-grid';
 
 @Pipe({
   name: 'gridPipe',
+  pure: false
 })
 
 export class GridPipe implements PipeTransform {
 
-  private parent: AutoGrid;
 
-  constructor(parent: AutoGrid){
 
-    this.parent = parent;
+  constructor(){
+
+
 
   }
 
-  transform(allValues: any[]) {
+  transform(allValues: any[], arg: any) {
+
+    console.log(arg);
 
     return allValues;
 

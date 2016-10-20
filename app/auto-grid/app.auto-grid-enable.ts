@@ -15,7 +15,7 @@ import { AutoGrid } from './app.auto-grid';
 @Component({
   selector    : 'th[auto-grid-enable]',
   templateUrl : 'app/auto-grid/templates/auto-grid-enable.html',
-  providers   : [AutoGrid]
+  providers   : []
 })
 
 export class AutoGridEnable {
@@ -34,11 +34,11 @@ export class AutoGridEnable {
 
 
 
-  constructor(el: ElementRef, renderer: Renderer, parent: AutoGrid) {
+  constructor(el: ElementRef, renderer: Renderer, @Inject(forwardRef(() => AutoGrid)) parent: AutoGrid) {
 
     renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
 
-    //console.log('in child constructor: ' + parent.message);
+
 
     this.parent = parent;
 
@@ -46,7 +46,7 @@ export class AutoGridEnable {
 
   ngOnInit(){
 
-    console.log('from child ngOnInit: ' + this.enableSort);
+
 
   }
 
@@ -60,13 +60,14 @@ export class AutoGridEnable {
 
   getFilterItems = function(){
 
+    return this.parent.getFilterOptions(this.column);
 
-
-    return _.values([1,2,3,4,5,6]);
   }
 
-
   onFilterChange = function(filterSelection: any){
+
+    this.parent.setFilterProperty(this.column, filterSelection);
+
     console.log(filterSelection);
   }
 
