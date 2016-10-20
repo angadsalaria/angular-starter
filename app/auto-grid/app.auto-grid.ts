@@ -3,11 +3,13 @@
  */
 import * as _ from 'lodash';
 import { Component, Input, Injectable } from '@angular/core';
+import { GridPipe } from './pipes/auto-grid.pipe';
+import { SharedService } from './app.grid-service';
 
 @Component({
   selector    : 'auto-grid',
   templateUrl : 'app/auto-grid/templates/auto-grid.html',
-
+  providers: []
 })
 
 @Injectable()
@@ -18,6 +20,10 @@ export class AutoGrid {
   filters = {};
 
   message = 'static message';
+
+  constructor(private sharedService: SharedService){
+
+  }
 
   getFilterOptions = function(path :string){
 
@@ -30,6 +36,8 @@ export class AutoGrid {
   };
 
   setFilterProperty = function(path :string, value :any){
+    this.sharedService.insertData(value );
+
 
     //_.set(this.filters, path, value);
     //console.log(this.filters);
@@ -39,6 +47,8 @@ export class AutoGrid {
 
 
   }
+
+
 
   getFilters = function(){
     return this.filters;

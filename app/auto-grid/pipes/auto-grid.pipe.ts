@@ -3,6 +3,7 @@
  */
 
 import { Pipe, PipeTransform} from '@angular/core';
+import { SharedService } from '../app.grid-service';
 
 @Pipe({
   name: 'gridPipe',
@@ -13,7 +14,7 @@ export class GridPipe implements PipeTransform {
 
 
 
-  constructor(){
+  constructor(private sharedService: SharedService){
 
 
 
@@ -21,7 +22,7 @@ export class GridPipe implements PipeTransform {
 
   transform(allValues: any[], arg: any) {
 
-    console.log(arg);
+    console.log(this.sharedService.dataArray);
 
     return allValues;
 
