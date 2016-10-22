@@ -9,7 +9,7 @@
 
   <select [ngModel]="filterSelection" (ngModelChange)="onFilterChange($event)">
 
-
+    <option> </option>
     <option *ngFor=" let item of getFilterItems() " [value]="item">
       {{item}}
     </option>

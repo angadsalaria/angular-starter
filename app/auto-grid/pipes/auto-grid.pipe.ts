@@ -3,8 +3,7 @@
  */
 
 import { Pipe, PipeTransform, Injector, Host} from '@angular/core';
-import { SharedService } from '../app.grid-service';
-import { AutoGrid } from '../app.auto-grid';
+import * as _ from 'lodash';
 
 @Pipe({
   name: 'gridPipe',
@@ -20,13 +19,15 @@ export class GridPipe implements PipeTransform {
 
   }
 
-  transform(allValues: any[], arg: any) {
+  private omitFn = function(value: any, key: string){
+    return value === '';
+  };
 
-    console.log(arg);
+  transform(allValues: Array<Object>, filter: Object) {
 
-    //console.log(this.autoGrid);
+    filter = _.omitBy(filter, this.omitFn);
 
-    return allValues;
+    return _.filter(allValues, filter);
 
   }
 }
