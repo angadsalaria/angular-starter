@@ -17,8 +17,8 @@ import { Selection } from './classes/selection';
 @Component({
   selector    : 'th[auto-grid-enable]',
   templateUrl : 'app/auto-grid/templates/auto-grid-enable.html',
-  providers   : [],
   styleUrls  : ['app/auto-grid/styles/auto-grid-styles.css']
+
 })
 
 export class AutoGridEnable {
@@ -40,41 +40,17 @@ export class AutoGridEnable {
   constructor(el: ElementRef, renderer: Renderer, @Inject(forwardRef(() => AutoGrid)) parent: AutoGrid) {
 
     renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
-
-
-
     this.parent = parent;
-
-  }
-
-  ngOnInit(){
-
-
-
-  }
-
-  isAscending = function(){
-
-    var sortings = this.getGridSorting();
-
-    if(sortings.path != this.column){
-      return null;
-    }
-
-    return sortings.isAscending === false && sortings.path == this.column;
-
 
   }
 
   isSortActive = function(){
     var sortings = this.getGridSorting();
-    //return sortings.path == this.column;
     return this.enableSort != undefined;
   }
 
   isSortable = function(){
     var sortings = this.getGridSorting();
-    //return sortings.path == this.column;
     return this.enableSort != undefined && this.isAscending != undefined;
   }
 
@@ -103,6 +79,20 @@ export class AutoGridEnable {
   onSortChange = function(){
 
     this.parent.setSortColumn(this.column, this.isAscending)
+
+  }
+
+
+  isAscending = function(){
+
+    var sortings = this.getGridSorting();
+
+    if(sortings.path != this.column){
+      return null;
+    }
+
+    return sortings.isAscending === false && sortings.path == this.column;
+
 
   }
 

@@ -28,36 +28,40 @@ export class AutoGrid {
 
   getFilterOptions = function(path :string){
 
+    var sorter:any = function( item: any ) { return item };
+    var opts = _.sortBy(
 
-    var opts = _.uniq(
-                  _.map(this.data, path)
-                );
+                    _.uniq(
+                      _.map(this.data, path)
+                    ),
+                    sorter
+                  );
 
-    return opts;
+  return opts;
 
-  };
+};
 
-  setFilterProperty = function(path :string, value :any){
+setFilterProperty = function(path :string, value :any){
 
-    _.set(this.selections.filters, path, value);
+  _.set(this.selections.filters, path, value);
 
-  }
+}
 
-  setSortColumn = function(path: string){
+setSortColumn = function(path: string){
 
-    //var isAscending = !this.selections.sortings.isAscending;
+  //var isAscending = !this.selections.sortings.isAscending;
 
-    this.selections.sortings.update(path);
+  this.selections.sortings.update(path);
 
 
-  }
+}
 
-  getCurrentSorting = function(){
-    return this.selections.sortings;
-  }
+getCurrentSorting = function(){
+  return this.selections.sortings;
+}
 
-  getFilters = function(){
-    return this.filters;
-  }
+getFilters = function(){
+  return this.filters;
+}
 
 }
