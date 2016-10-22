@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'parent-selector',
   templateUrl: 'app/templates/parent-selector.html',

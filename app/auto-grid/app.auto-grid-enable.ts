@@ -2,6 +2,8 @@
  * Created by asalaria on 10/9/2016.
  *
  * test plunkr: //https://plnkr.co/edit/KudLYPUww4r286iPzGTN?p=preview
+ * https://plnkr.co/edit/U3nzaesTk8X1Z9wzSmJx?p=preview
+ * https://plnkr.co/edit/dwwaJhswZLaOk2TFBbVz?p=preview
  * viewchildren: https://plnkr.co/edit/LzkaD7v4NTB8nREMxHqi?p=preview
  * http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html
  */

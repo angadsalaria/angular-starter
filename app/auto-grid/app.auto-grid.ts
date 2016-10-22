@@ -9,7 +9,7 @@ import { SharedService } from './app.grid-service';
 @Component({
   selector    : 'auto-grid',
   templateUrl : 'app/auto-grid/templates/auto-grid.html',
-  providers: []
+  providers: [SharedService]
 })
 
 @Injectable()
@@ -21,7 +21,7 @@ export class AutoGrid {
 
   message = 'static message';
 
-  constructor(private sharedService: SharedService){
+  constructor(public sharedService: SharedService){
 
   }
 
@@ -39,7 +39,7 @@ export class AutoGrid {
     this.sharedService.insertData(value );
 
 
-    //_.set(this.filters, path, value);
+    _.set(this.filters, path, value);
     //console.log(this.filters);
   }
 
