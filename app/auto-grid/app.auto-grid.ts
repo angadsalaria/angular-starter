@@ -3,7 +3,7 @@
  */
 import * as _ from 'lodash';
 import { Component, Input, Injectable } from '@angular/core';
-import { GridPipe } from './pipes/auto-grid.pipe';
+import { Selection } from './classes/selection';
 import { SharedService } from './app.grid-service';
 
 @Component({
@@ -17,7 +17,7 @@ export class AutoGrid {
 
   @Input() data: Array<Object>;
 
-  selections = { filters: {}, sortings: {}};
+  selections = new Selection();
 
   message = 'static message';
 

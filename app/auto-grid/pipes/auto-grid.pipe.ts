@@ -2,8 +2,10 @@
  * Created by asalaria on 10/15/16.
  */
 
-import { Pipe, PipeTransform, Injector, Host} from '@angular/core';
 import * as _ from 'lodash';
+import { Pipe, PipeTransform, Injector, Host} from '@angular/core';
+import { Selection } from '../classes/selection';
+
 
 @Pipe({
   name: 'gridPipe',
@@ -23,9 +25,9 @@ export class GridPipe implements PipeTransform {
     return value === '';
   };
 
-  transform(allValues: Array<Object>, selections: Object) {
+  transform(allValues: Array<Object>, selection: Selection) {
 
-    var filter = _.omitBy(selections.filters, this.omitFn);
+    var filter = _.omitBy(selection.filters, this.omitFn);
 
     return _.filter(allValues, filter);
 
