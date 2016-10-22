@@ -12,6 +12,12 @@ export class Selection{
 
   sortings: Sorting;
 
+  constructor(){
+
+    this.sortings = new Sorting(null, null);
+
+  }
+
 
 }
 

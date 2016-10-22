@@ -16,4 +16,11 @@ export class Sorting{
 
   }
 
+  public update(_path: string){
+
+    this.path = _path;
+    this.isAscending = !this.isAscending;
+
+  }
+
 }

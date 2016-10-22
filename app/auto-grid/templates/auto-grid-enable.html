@@ -4,7 +4,7 @@
 
   <!-- Sort Control -->
   <div *ngIf = " isSortable() "
-       [ngClass] = "{'glyphicon-menu-down' : isAscending, 'glyphicon-menu-up': !isAscending} "
+       [ngClass] = "{'glyphicon-menu-down' : isAscending() === false , 'glyphicon-menu-up': isAscending() === true} "
        class="glyphicon" >
 
 

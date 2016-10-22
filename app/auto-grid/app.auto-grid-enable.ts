@@ -24,7 +24,6 @@ import { Selection } from './classes/selection';
 export class AutoGridEnable {
 
   parent: AutoGrid;
-  isAscending: boolean;
 
   @Input('auto-grid-enable')
   column: string;
@@ -50,6 +49,19 @@ export class AutoGridEnable {
 
   ngOnInit(){
 
+
+
+  }
+
+  isAscending = function(){
+
+    var sortings = this.getGridSorting();
+
+    if(sortings.path != this.column){
+      return null;
+    }
+
+    return sortings.isAscending === false && sortings.path == this.column;
 
 
   }
@@ -89,8 +101,6 @@ export class AutoGridEnable {
   }
 
   onSortChange = function(){
-
-    this.isAscending = !this.isAscending;
 
     this.parent.setSortColumn(this.column, this.isAscending)
 

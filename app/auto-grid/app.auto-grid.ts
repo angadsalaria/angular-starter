@@ -43,11 +43,12 @@ export class AutoGrid {
 
   }
 
-  setSortColumn = function(path: string, reverse: boolean){
+  setSortColumn = function(path: string){
 
+    //var isAscending = !this.selections.sortings.isAscending;
 
-    this.selections.sortings = new Sorting(path, reverse);
-    console.log(this.selections.sortings);
+    this.selections.sortings.update(path);
+
 
   }
 
