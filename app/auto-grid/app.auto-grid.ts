@@ -5,7 +5,6 @@ import * as _ from 'lodash';
 import { Component, Input, Injectable } from '@angular/core';
 import { Selection } from './classes/selection';
 import { SharedService } from './app.grid-service';
-import { Sorting } from './classes/sorting';
 
 @Component({
   selector    : 'auto-grid',
@@ -49,10 +48,7 @@ setFilterProperty = function(path :string, value :any){
 
 setSortColumn = function(path: string){
 
-  //var isAscending = !this.selections.sortings.isAscending;
-
   this.selections.sortings.update(path);
-
 
 }
 

@@ -12,7 +12,6 @@
 import * as _ from 'lodash';
 import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@angular/core';
 import { AutoGrid } from './app.auto-grid';
-import { Selection } from './classes/selection';
 
 @Component({
   selector    : 'th[auto-grid-enable]',
