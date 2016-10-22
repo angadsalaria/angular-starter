@@ -23,9 +23,9 @@ export class GridPipe implements PipeTransform {
     return value === '';
   };
 
-  transform(allValues: Array<Object>, filter: Object) {
+  transform(allValues: Array<Object>, selections: Object) {
 
-    filter = _.omitBy(filter, this.omitFn);
+    var filter = _.omitBy(selections.filters, this.omitFn);
 
     return _.filter(allValues, filter);
 

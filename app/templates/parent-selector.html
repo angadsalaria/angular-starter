@@ -12,7 +12,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let data of ( gridData | gridPipe:grid.filters )">
+      <tr *ngFor="let data of ( gridData | gridPipe:grid.selections )">
         <td>{{data.id}}</td>
         <td>{{data.fname}}</td>
         <td>{{data.lname}}</td>
@@ -20,25 +20,25 @@
       </tbody>
     </table>
   </auto-grid>
-<!--
+
 
   <auto-grid [data]="gridData" #grid2>
     <table class="table">
       <thead>
       <tr>
-        <th auto-grid-enable="id" enable-sort enable-filter>id</th>
+        <th>id</th>
         <th>First Name</th>
-        <th>Last Name</th>
+        <th auto-grid-enable="lname" enable-sort enable-filter>Last Name</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let data of ( gridData | gridPipe:grid2.filters )">
+      <tr *ngFor="let data of ( gridData | gridPipe:grid2.selections )">
         <td>{{data.id}}</td>
         <td>{{data.fname}}</td>
         <td>{{data.lname}}</td>
       </tr>
       </tbody>
     </table>
-  </auto-grid>-->
+  </auto-grid>
 </div>
 

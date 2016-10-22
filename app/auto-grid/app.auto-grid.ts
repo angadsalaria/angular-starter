@@ -17,7 +17,7 @@ export class AutoGrid {
 
   @Input() data: Array<Object>;
 
-  filters = {};
+  selections = { filters: {}, sortings: {}};
 
   message = 'static message';
 
@@ -39,7 +39,7 @@ export class AutoGrid {
     this.sharedService.insertData(value );
 
 
-    _.set(this.filters, path, value);
+    _.set(this.selections.filters, path, value);
     //console.log(this.filters);
   }
 
