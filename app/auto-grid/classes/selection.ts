@@ -3,12 +3,17 @@
  */
 
 
+import {Sorting} from './sorting'
+
 export class Selection{
 
 
   filters = {};
 
-  sortings = {};
+  sortings: Sorting;
 
 
 }
+
+
+

@@ -12,17 +12,19 @@
 import * as _ from 'lodash';
 import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@angular/core';
 import { AutoGrid } from './app.auto-grid';
-
+import { Selection } from './classes/selection';
 
 @Component({
   selector    : 'th[auto-grid-enable]',
   templateUrl : 'app/auto-grid/templates/auto-grid-enable.html',
-  providers   : []
+  providers   : [],
+  styleUrls  : ['app/auto-grid/styles/auto-grid-styles.css']
 })
 
 export class AutoGridEnable {
 
   parent: AutoGrid;
+  isAscending: boolean;
 
   @Input('auto-grid-enable')
   column: string;
@@ -53,11 +55,24 @@ export class AutoGridEnable {
   }
 
   isSortActive = function(){
+    var sortings = this.getGridSorting();
+    //return sortings.path == this.column;
     return this.enableSort != undefined;
+  }
+
+  isSortable = function(){
+    var sortings = this.getGridSorting();
+    //return sortings.path == this.column;
+    return this.enableSort != undefined && this.isAscending != undefined;
   }
 
   isFilterActive = function(){
     return this.enableFilter != undefined;
+  }
+
+
+  getGridSorting = function(){
+    return this.parent.getCurrentSorting();
   }
 
   getFilterItems = function(){
@@ -71,6 +86,14 @@ export class AutoGridEnable {
     this.parent.setFilterProperty(this.column, filterSelection);
 
     console.log(filterSelection);
+  }
+
+  onSortChange = function(){
+
+    this.isAscending = !this.isAscending;
+
+    this.parent.setSortColumn(this.column, this.isAscending)
+
   }
 
 }

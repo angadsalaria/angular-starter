@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 import { Component, Input, Injectable } from '@angular/core';
 import { Selection } from './classes/selection';
 import { SharedService } from './app.grid-service';
+import { Sorting } from './classes/sorting';
 
 @Component({
   selector    : 'auto-grid',
@@ -33,22 +34,26 @@ export class AutoGrid {
                 );
 
     return opts;
+
   };
 
   setFilterProperty = function(path :string, value :any){
-    this.sharedService.insertData(value );
-
 
     _.set(this.selections.filters, path, value);
-    //console.log(this.filters);
-  }
-
-  ngOnInit() {
-
 
   }
 
+  setSortColumn = function(path: string, reverse: boolean){
 
+
+    this.selections.sortings = new Sorting(path, reverse);
+    console.log(this.selections.sortings);
+
+  }
+
+  getCurrentSorting = function(){
+    return this.selections.sortings;
+  }
 
   getFilters = function(){
     return this.filters;
