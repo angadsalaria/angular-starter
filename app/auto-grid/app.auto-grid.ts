@@ -1,6 +1,7 @@
 /**
  * Created by asalaria on 10/5/2016.
  */
+
 import * as _ from 'lodash';
 import { Component, Input, Injectable } from '@angular/core';
 import { Selection } from './classes/selection';
@@ -36,28 +37,34 @@ export class AutoGrid {
                     sorter
                   );
 
-  return opts;
+    return opts;
 
-};
+  };
 
-setFilterProperty = function(path :string, value :any){
+  setFilterProperty = function(path :string, value :any){
 
-  _.set(this.selections.filters, path, value);
+    _.set(this.selections.filters, path, value);
 
-}
+  };
 
-setSortColumn = function(path: string){
+  unsetFilterProperty = function(path: string){
 
-  this.selections.sortings.update(path);
+    _.unset(this.selections.filters, path);
 
-}
+  };
 
-getCurrentSorting = function(){
-  return this.selections.sortings;
-}
+  setSortColumn = function(path: string){
 
-getFilters = function(){
-  return this.filters;
-}
+    this.selections.sortings.update(path);
+
+  }
+
+  getCurrentSorting = function(){
+    return this.selections.sortings;
+  }
+
+  getFilters = function(){
+    return this.filters;
+  }
 
 }

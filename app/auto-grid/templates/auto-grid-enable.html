@@ -22,4 +22,9 @@
     </option>
 
   </select>
+
+  <span (click) = " resetFilter() "
+        *ngIf=" filterSelection != null && filterSelection != '' "
+        class="glyphicon glyphicon-ban-circle clickable"> </span>
+
 </div>

@@ -33,7 +33,7 @@ export class AutoGridEnable {
   @Input('enable-filter')
   enableFilter: any;
 
-
+  filterSelection: any;
 
 
   constructor(el: ElementRef, renderer: Renderer, @Inject(forwardRef(() => AutoGrid)) parent: AutoGrid) {
@@ -72,7 +72,15 @@ export class AutoGridEnable {
 
     this.parent.setFilterProperty(this.column, filterSelection);
 
-    console.log(filterSelection);
+    this.filterSelection = filterSelection;
+  }
+
+  resetFilter = function(){
+
+    this.filterSelection = null;
+
+    this.parent.unsetFilterProperty( this.column );
+
   }
 
   onSortChange = function(){
