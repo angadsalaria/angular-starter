@@ -1,0 +1,34 @@
+<!-- Transcluded parent content -->
+<span style="cursor: pointer" (click)="onSortChange()">
+  <ng-content></ng-content>
+
+  <!-- Sort Control -->
+  <div *ngIf = " isSortable() "
+       [ngClass] = "{'glyphicon-menu-down' : isAscending() === false , 'glyphicon-menu-up': isAscending() === true} "
+       class="glyphicon" >
+
+
+
+  </div>
+</span>
+
+<!-- Filter Control -->
+<div *ngIf = " isFilterActive() ">
+
+  <!-- Filter select box -->
+  <select [(ngModel)]="filterSelection" (ngModelChange)="onFilterChange($event)">
+
+    <option> </option>
+    <option *ngFor=" let item of getFilterItems() " [ngValue]="item">
+      {{item}}
+    </option>
+
+  </select>
+
+  <!-- Filter un-select -->
+  <span (click) = " resetFilter() "
+        *ngIf = " filterSelection != null "
+        class = "glyphicon glyphicon-ban-circle clickable">
+  </span>
+
+</div>
