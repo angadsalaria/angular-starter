@@ -44,11 +44,14 @@ export class AutoGridEnable {
   }
 
   isSortActive = function(){
+
     var sortings = this.getGridSorting();
     return this.enableSort != undefined;
+
   }
 
   isSortable = function(){
+
     var sortings = this.getGridSorting();
     return this.enableSort != undefined && this.isAscending != undefined;
   }
@@ -70,9 +73,8 @@ export class AutoGridEnable {
 
   onFilterChange = function(filterSelection: any){
 
-    this.parent.setFilterProperty(this.column, filterSelection);
+     this.parent.setFilterProperty(this.column, filterSelection);
 
-    this.filterSelection = filterSelection;
   }
 
   resetFilter = function(){

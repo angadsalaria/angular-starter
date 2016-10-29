@@ -11,20 +11,24 @@
 
   </div>
 </span>
+
 <!-- Filter Control -->
 <div *ngIf = " isFilterActive() ">
 
-  <select [ngModel]="filterSelection" (ngModelChange)="onFilterChange($event)">
+  <!-- Filter select box -->
+  <select [(ngModel)]="filterSelection" (ngModelChange)="onFilterChange($event)">
 
     <option> </option>
-    <option *ngFor=" let item of getFilterItems() " [value]="item">
+    <option *ngFor=" let item of getFilterItems() " [ngValue]="item">
       {{item}}
     </option>
 
   </select>
 
+  <!-- Filter un-select -->
   <span (click) = " resetFilter() "
-        *ngIf=" filterSelection != null && filterSelection != '' "
-        class="glyphicon glyphicon-ban-circle clickable"> </span>
+        *ngIf = " filterSelection != null "
+        class = "glyphicon glyphicon-ban-circle clickable">
+  </span>
 
 </div>

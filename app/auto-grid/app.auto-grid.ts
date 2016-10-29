@@ -20,8 +20,6 @@ export class AutoGrid {
 
   selections = new Selection();
 
-  message = 'static message';
-
   constructor(public sharedService: SharedService){
 
   }
@@ -29,6 +27,7 @@ export class AutoGrid {
   getFilterOptions = function(path :string){
 
     var sorter:any = function( item: any ) { return item };
+
     var opts = _.sortBy(
 
                     _.uniq(
