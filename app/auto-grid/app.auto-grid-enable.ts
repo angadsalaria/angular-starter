@@ -5,6 +5,7 @@
  * https://plnkr.co/edit/U3nzaesTk8X1Z9wzSmJx?p=preview
  * https://plnkr.co/edit/dwwaJhswZLaOk2TFBbVz?p=preview
  * viewchildren: https://plnkr.co/edit/LzkaD7v4NTB8nREMxHqi?p=preview
+ * https://www.youtube.com/watch?v=4YmnbGoh49U&feature=youtu.be
  * http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html
  */
 

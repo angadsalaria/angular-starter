@@ -8,8 +8,8 @@ import { Selection } from './classes/selection';
 
 @Component({
   selector    : 'auto-grid',
-  templateUrl : 'app/auto-grid/templates/auto-grid.html',
-  })
+  templateUrl : 'app/auto-grid/templates/auto-grid.html'
+})
 
 @Injectable()
 export class AutoGrid {
@@ -17,7 +17,6 @@ export class AutoGrid {
   @Input() data: Array<Object>;
 
   selections = new Selection();
-
 
   getFilterOptions = function(path :string){
 
