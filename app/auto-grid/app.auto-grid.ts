@@ -5,13 +5,11 @@
 import * as _ from 'lodash';
 import { Component, Input, Injectable } from '@angular/core';
 import { Selection } from './classes/selection';
-import { SharedService } from './app.grid-service';
 
 @Component({
   selector    : 'auto-grid',
   templateUrl : 'app/auto-grid/templates/auto-grid.html',
-  providers: [SharedService]
-})
+  })
 
 @Injectable()
 export class AutoGrid {
@@ -20,9 +18,6 @@ export class AutoGrid {
 
   selections = new Selection();
 
-  constructor(public sharedService: SharedService){
-
-  }
 
   getFilterOptions = function(path :string){
 

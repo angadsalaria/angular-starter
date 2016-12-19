@@ -13,6 +13,7 @@ import {ParentComponent} from "./app.component";
             `
 })
 export class ChildComponent {
+
   @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
   message: string;
