@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AutoGridModule } from './auto-grid/auto-grid.module';
 
-import { ParentComponent }  from './app.component';
-import { ChildComponent }  from './app.child-component';
+import { RootComponent }  from './app.component';
 
 @NgModule({
   imports: [ AutoGridModule, BrowserModule, FormsModule ],
-  declarations: [ ParentComponent, ChildComponent ],
-  bootstrap: [ ParentComponent  ],
+  declarations: [ RootComponent ],
+  bootstrap: [ RootComponent  ],
   providers: [],
 })
 export class AppModule { }

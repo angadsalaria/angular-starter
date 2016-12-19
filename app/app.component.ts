@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'parent-selector',
-  templateUrl: 'app/templates/parent-selector.html',
+  selector: 'root-app',
+  templateUrl: 'app/templates/root-app.html',
 
 })
-export class ParentComponent {
+export class RootComponent {
 
   message = "Hello!";
 

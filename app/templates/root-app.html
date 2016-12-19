@@ -1,12 +1,12 @@
 <div>
-  <h1>I'm a container component. {{gridData.length}}</h1>
-  <child-selector (notify)='onNotify($event)'></child-selector>
+  <h1>Auto Grid</h1>
+
 
   <auto-grid [data]="gridData" #grid>
     <table class="table">
       <thead>
       <tr>
-        <th >id</th>
+        <th>id</th>
         <th auto-grid-enable="fname" enable-sort enable-filter>First Name</th>
         <th>Last Name</th>
       </tr>
@@ -27,8 +27,8 @@
       <thead>
       <tr>
         <th auto-grid-enable="id" enable-filter>id</th>
-        <th auto-grid-enable="fname" enable-sort enable-filter >First Name</th>
-        <th auto-grid-enable="lname" enable-sort enable-filter >Last Name</th>
+        <th auto-grid-enable="fname" enable-sort enable-filter>First Name</th>
+        <th auto-grid-enable="lname" enable-sort enable-filter>Last Name</th>
       </tr>
       </thead>
       <tbody>
