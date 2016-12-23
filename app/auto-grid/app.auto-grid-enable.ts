@@ -30,8 +30,8 @@ export class AutoGridEnable {
   @Input('enable-sort')
   enableSort: any;
 
-  @Input('enable-filter')
-  enableFilter: any;
+  @Input('enable-selection')
+  enableSelection: any;
 
   filterSelection: any;
 
@@ -57,7 +57,7 @@ export class AutoGridEnable {
   }
 
   isFilterActive = function(){
-    return this.enableFilter != undefined;
+    return this.enableSelection != undefined;
   }
 
 

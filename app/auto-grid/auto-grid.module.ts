@@ -11,6 +11,6 @@ import { GridPipe }  from './pipes/auto-grid.pipe';
   declarations: [ AutoGrid, AutoGridEnable, GridPipe ],
   providers: [ ],
   bootstrap: [ ],
-  exports: [ GridPipe, AutoGrid, AutoGridEnable ]
+  exports: [ AutoGrid, AutoGridEnable, GridPipe ]
 })
 export class AutoGridModule { }
