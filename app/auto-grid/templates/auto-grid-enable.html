@@ -1,14 +1,11 @@
-<!-- Transcluded parent content -->
-<span style="cursor: pointer" (click)="onSortChange()">
+<!-- Sort Control -->
+<span [ngClass] = "{'clickable' : isSortable()}" (click)="onSortChange()">
   <ng-content></ng-content>
 
-  <!-- Sort Control -->
+
   <div *ngIf = " isSortable() "
        [ngClass] = "{'glyphicon-menu-down' : isAscending() === false , 'glyphicon-menu-up': isAscending() === true} "
        class="glyphicon" >
-
-
-
   </div>
 </span>
 

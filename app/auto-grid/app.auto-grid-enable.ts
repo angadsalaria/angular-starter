@@ -9,14 +9,13 @@
  */
 
 
-import * as _ from 'lodash';
-import { Component, ElementRef, Input, Renderer, Inject, forwardRef } from '@angular/core';
-import { AutoGrid } from './app.auto-grid';
+import {Component, ElementRef, Input, Renderer, Inject, forwardRef} from "@angular/core";
+import {AutoGrid} from "./app.auto-grid";
 
 @Component({
-  selector    : 'th[auto-grid-enable]',
-  templateUrl : 'app/auto-grid/templates/auto-grid-enable.html',
-  styleUrls  : ['app/auto-grid/styles/auto-grid-styles.css']
+  selector: 'th[auto-grid-enable]',
+  templateUrl: 'app/auto-grid/templates/auto-grid-enable.html',
+  styleUrls: ['app/auto-grid/styles/auto-grid-styles.css']
 
 })
 
@@ -43,60 +42,63 @@ export class AutoGridEnable {
 
   }
 
-  isSortActive = function(){
+  isSortActive = function () {
 
-    var sortings = this.getGridSorting();
     return this.enableSort != undefined;
 
   }
 
-  isSortable = function(){
+  isSortable = function () {
 
-    var sortings = this.getGridSorting();
     return this.enableSort != undefined && this.isAscending != undefined;
+
   }
 
-  isFilterActive = function(){
+  isFilterActive = function () {
     return this.enableSelection != undefined;
   }
 
 
-  getGridSorting = function(){
+  getGridSorting = function () {
     return this.parent.getCurrentSorting();
   }
 
-  getFilterItems = function(){
+  getFilterItems = function () {
 
     return this.parent.getFilterOptions(this.column);
 
   }
 
-  onFilterChange = function(filterSelection: any){
+  onFilterChange = function (filterSelection: any) {
 
-     this.parent.setFilterProperty(this.column, filterSelection);
+    this.parent.setFilterProperty(this.column, filterSelection);
 
   }
 
-  resetFilter = function(){
+  resetFilter = function () {
 
     this.filterSelection = null;
 
-    this.parent.unsetFilterProperty( this.column );
+    this.parent.unsetFilterProperty(this.column);
 
   }
 
-  onSortChange = function(){
+  onSortChange = function () {
 
-    this.parent.setSortColumn(this.column, this.isAscending)
+    if (this.isSortable()) {
+
+      this.parent.setSortColumn(this.column, this.isAscending);
+
+    }
 
   }
 
 
-  isAscending = function(){
+  isAscending = function () {
 
     var sortings = this.getGridSorting();
 
-    if(sortings.path != this.column){
+    if (sortings.path != this.column) {
       return null;
     }
 
