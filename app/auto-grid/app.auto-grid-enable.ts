@@ -8,7 +8,7 @@
  * http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html
  */
 
-
+import * as _ from 'lodash';
 import {Component, ElementRef, Input, Renderer, Inject, forwardRef} from "@angular/core";
 import {AutoGrid} from "./app.auto-grid";
 
@@ -26,11 +26,11 @@ export class AutoGridEnable {
   @Input('auto-grid-enable')
   column: string;
 
-  @Input('enable-sort')
-  enableSort: any;
+  @Input('sort-enabled')
+  sortEnabled: boolean;
 
-  @Input('enable-selection')
-  enableSelection: any;
+  @Input('select-enabled')
+  selectEnabled: boolean;
 
   filterSelection: any;
 
@@ -42,20 +42,16 @@ export class AutoGridEnable {
 
   }
 
-  isSortActive = function () {
+  ngOnInit() {
 
-    return this.enableSort != undefined;
+    this.selectEnabled = !_.isUndefined(this.selectEnabled);
+    this.sortEnabled = !_.isUndefined(this.sortEnabled);
 
-  }
-
-  isSortable = function () {
-
-    return this.enableSort != undefined && this.isAscending != undefined;
 
   }
 
   isFilterActive = function () {
-    return this.enableSelection != undefined;
+    return this.selectEnabled;
   }
 
 
@@ -85,7 +81,7 @@ export class AutoGridEnable {
 
   onSortChange = function () {
 
-    if (this.isSortable()) {
+    if (this.sortEnabled) {
 
       this.parent.setSortColumn(this.column, this.isAscending);
 

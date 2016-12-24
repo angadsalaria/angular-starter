@@ -1,16 +1,16 @@
 <!-- Sort Control -->
-<span [ngClass] = "{'clickable' : isSortable()}" (click)="onSortChange()">
+<span [ngClass] = "{'clickable' : sortEnabled}" (click)="onSortChange()">
   <ng-content></ng-content>
 
 
-  <div *ngIf = " isSortable() "
+  <div *ngIf = " sortEnabled "
        [ngClass] = "{'glyphicon-menu-down' : isAscending() === false , 'glyphicon-menu-up': isAscending() === true} "
        class="glyphicon" >
   </div>
 </span>
 
 <!-- Filter Control -->
-<div *ngIf = " isFilterActive() ">
+<div *ngIf = " selectEnabled ">
 
   <!-- Filter select box -->
   <select [(ngModel)]="filterSelection" (ngModelChange)="onFilterChange($event)">
