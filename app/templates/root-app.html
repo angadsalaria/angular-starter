@@ -1,18 +1,18 @@
 <div>
-  <h1>Auto Grid Demo</h1>
+  <h1>Auto Grid Sample App</h1>
 
-
-  <auto-grid [data]="gridData" #grid>
+  <h3>Grid 1</h3>
+  <auto-grid [data]="gridData" #grid1>
     <table class="table">
       <thead>
       <tr>
-        <th>id</th>
-        <th auto-grid-enable="fname" enable-sort enable-filter>First Name</th>
-        <th>Last Name</th>
+        <th auto-grid-enable="id" sort-enabled >id</th>
+        <th auto-grid-enable="fname" select-enabled >First Name</th>
+        <th auto-grid-enable="lname" select-enabled sort-enabled >Last Name</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let data of ( gridData | gridPipe:grid.selections )">
+      <tr *ngFor="let data of ( gridData | gridPipe:grid1.selections )">
         <td>{{data.id}}</td>
         <td>{{data.fname}}</td>
         <td>{{data.lname}}</td>
@@ -21,14 +21,14 @@
     </table>
   </auto-grid>
 
-
+  <h3>Grid 2</h3>
   <auto-grid [data]="gridData" #grid2>
     <table class="table">
       <thead>
       <tr>
-        <th auto-grid-enable="id" enable-sort>id</th>
-        <th auto-grid-enable="fname" enable-sort enable-filter>First Name</th>
-        <th auto-grid-enable="lname" enable-sort enable-filter>Last Name</th>
+        <th auto-grid-enable="id" sort-enabled >id</th>
+        <th auto-grid-enable="fname" select-enabled >First Name</th>
+        <th auto-grid-enable="lname" select-enabled sort-enabled >Last Name</th>
       </tr>
       </thead>
       <tbody>
