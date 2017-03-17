@@ -3,6 +3,13 @@
 
 Bootstrapped from [angular.io quickstart](https://github.com/angular/quickstart),
 
+>git clone https://github.com/angular/quickstart  my-proj
+
+>cd my-proj
+
+>npm install
+
+>npm start
 
 
 Atom packages:
