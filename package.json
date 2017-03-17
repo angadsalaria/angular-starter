@@ -1,7 +1,7 @@
 {
   "name": "angular2-quickstart",
   "version": "1.0.0",
-  "engines": {
+  "engines": { 
     "node": "4.1.1"
   },
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
