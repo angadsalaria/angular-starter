@@ -39,7 +39,7 @@ Usage
   &lt;/auto-grid&gt;
 </pre>
 
-where grid data is passed provided to the component:
+where grid data is provided to the enclosing component:
 
     gridData = [
             {id:1, fname: 'Angad', lname: 'Salaria'},
