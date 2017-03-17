@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
+    "preinstall": "npm i typings -g",
     "start_old": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "start": "concurrently \"tsc -w\" \"lite-server\" ",
     "docker-build": "docker build -t ng2-quickstart .",
