@@ -3,7 +3,8 @@
 
 Taken from [angular.io quickstart](https://github.com/angular/quickstart),
 
-#About: 
+About: 
+-
 Sample App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
 
 
