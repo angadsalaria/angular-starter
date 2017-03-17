@@ -16,7 +16,7 @@ export class ParentComponent {
     {id:3, fname: 'Sam', lname: 'Adams'},
     {id:4, fname: 'John', lname: 'Adams'},
     {id:5, fname: 'Edward', lname: 'Miller'},
-    {id:6, fname: 'Lawrence', lname: 'Krauss'}
+    {id:6, fname: 'Lawrence', lname: 'Bross'}
   ];
 
   onNotify(message:string):void {

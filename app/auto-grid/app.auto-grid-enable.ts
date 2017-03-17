@@ -39,7 +39,6 @@ export class AutoGridEnable {
 
   constructor(el: ElementRef, renderer: Renderer, @Inject(forwardRef(() => AutoGrid)) parent: AutoGrid) {
 
-    renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
     this.parent = parent;
 
   }
