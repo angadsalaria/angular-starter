@@ -3,8 +3,8 @@
 
 Bootstrapped from [angular.io quickstart](https://github.com/angular/quickstart),
 ```
-git https://github.com/angadsalaria/as-auto-grid  my-proj
-cd my-proj
+git https://github.com/angadsalaria/as-auto-grid  as-auto-grid
+cd as-auto-grid
 npm install
 npm start
 ```
