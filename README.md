@@ -18,6 +18,9 @@ Atom packages:
 - [editorconfig] (https://github.com/sindresorhus/atom-editorconfig)
 - [file-icons] (https://github.com/DanBrooker/file-icons)
 
+Live Demo
+-
+Hosted on Heroku: [Link](https://pure-gorge-56360.herokuapp.com/)
 
 Usage
 -
