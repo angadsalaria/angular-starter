@@ -1,7 +1,11 @@
 # Sample App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
 [![Build Status][travis-badge]][travis-badge-url]
 
-Bootstrapped from [angular.io quickstart](https://github.com/angular/quickstart),
+Bootstrapped from [angular.io quickstart](https://github.com/angular/quickstart)
+[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
+[travis-badge-url]: https://travis-ci.org/angular/quickstart
+
+
 ```
 git https://github.com/angadsalaria/as-auto-grid  as-auto-grid
 cd as-auto-grid
@@ -15,9 +19,6 @@ Atom packages:
 - linter-tslint
 - [editorconfig] (https://github.com/sindresorhus/atom-editorconfig)
 - [file-icons] (https://github.com/DanBrooker/file-icons)
-
-[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/angular/quickstart
 
 
 Usage
