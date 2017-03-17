@@ -16,3 +16,25 @@ Atom packages:
 [travis-badge-url]: https://travis-ci.org/angular/quickstart
 
 
+Usage
+-
+<pre>
+  &lt;auto-grid [data]="gridData" #grid&gt;
+    &lt;table class="table"&gt;
+      &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;id&lt;/th&gt;
+        &lt;th auto-grid-enable="fname" enable-sort enable-filter&gt;First Name&lt;/th&gt;
+        &lt;th&gt;Last Name&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+      &lt;tr *ngFor="let data of ( gridData | gridPipe:grid.selections )"&gt;
+        &lt;td&gt;{{data.id}}&lt;/td&gt;
+        &lt;td&gt;{{data.fname}}&lt;/td&gt;
+        &lt;td&gt;{{data.lname}}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/auto-grid&gt;
+</pre>
