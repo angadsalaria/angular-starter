@@ -1,9 +1,6 @@
 {
   "name": "angular2-quickstart",
   "version": "1.0.0",
-  "engines": { 
-    "node": "4.1.1"
-  },
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
@@ -61,5 +58,8 @@
     "typescript": "^2.0.2",
     "typings": "^1.0.4"
   },
-  "repository": {}
+  "repository": {},
+  "engines": {
+    "node": "7.2.1"
+  },
 }
