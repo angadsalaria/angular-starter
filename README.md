@@ -45,11 +45,11 @@ Usage
 where grid data is provided to the enclosing component:
 
     gridData = [
-            {id:1, fname: 'Angad', lname: 'Salaria'},
-            {id:2, fname: 'John', lname: 'Doe'},
-            {id:3, fname: 'Sam', lname: 'Adams'},
-            {id:4, fname: 'John', lname: 'Adams'},
-            {id:5, fname: 'Edward', lname: 'Miller'},
+            {id:1, fname: 'Angad',    lname: 'Salaria'},
+            {id:2, fname: 'John',     lname: 'Doe'},
+            {id:3, fname: 'Sam',      lname: 'Adams'},
+            {id:4, fname: 'John',     lname: 'Adams'},
+            {id:5, fname: 'Edward',   lname: 'Miller'},
             {id:6, fname: 'Lawrence', lname: 'Bross'}
           ];
   
