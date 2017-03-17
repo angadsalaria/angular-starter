@@ -1,7 +1,11 @@
-# Angular 2 QuickStart Source
+# Sample app sourced from Angular 2 QuickStart
 [![Build Status][travis-badge]][travis-badge-url]
 
 Taken from [angular.io quickstart](https://github.com/angular/quickstart),
+
+#About: 
+Sample App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
+
 
 Atom packages:
 - [atom-typescript] (https://github.com/TypeStrong/atom-typescript)
@@ -14,5 +18,3 @@ Atom packages:
 [travis-badge-url]: https://travis-ci.org/angular/quickstart
 
 
-About: 
-Sample App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
