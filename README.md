@@ -1,5 +1,5 @@
 # Sample App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
-[![Build Status][travis-badge]][travis-badge-url]
+
 
 Bootstrapped from [angular.io quickstart](https://github.com/angular/quickstart)
 
