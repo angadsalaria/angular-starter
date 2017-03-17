@@ -57,6 +57,7 @@
     "protractor": "^3.3.0",
     "rimraf": "^2.5.2",
     "tslint": "^3.7.4",
+    "ts-node": "1.2.1",
     "typescript": "^2.0.2",
     "typings": "^1.0.4"
   },
