@@ -38,3 +38,13 @@ Usage
     &lt;/table&gt;
   &lt;/auto-grid&gt;
 </pre>
+
+where grid data is passed provided to the component:
+  gridData = [
+    {id:1, fname: 'Angad', lname: 'Salaria'},
+    {id:2, fname: 'John', lname: 'Doe'},
+    {id:3, fname: 'Sam', lname: 'Adams'},
+    {id:4, fname: 'John', lname: 'Adams'},
+    {id:5, fname: 'Edward', lname: 'Miller'},
+    {id:6, fname: 'Lawrence', lname: 'Bross'}
+  ];
