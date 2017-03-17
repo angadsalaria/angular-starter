@@ -1,5 +1,5 @@
 # Auto-Grid
-Sample Angular App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
+Sample Angular App utilizing an Angular Module that provides automated grid features like sorting, filtering on array data.
 
 
 Bootstrapped from [angular.io quickstart](https://github.com/angular/quickstart)
