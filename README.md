@@ -12,3 +12,7 @@ Atom packages:
 
 [travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/angular/quickstart
+
+
+About: 
+Sample App that implements an Angular Module that provides automated grid features like sorting, filtering on array data.
